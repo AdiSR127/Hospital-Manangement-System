@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management By G56</title>
+    <link rel="icon" href="images/medical-logo.png" type="image/gif" sizes="16x16">
 
     <!--Importings Bootstrap and Styles-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Raleway">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/icofont/icofont.min.css" rel="stylesheet">
     <link href="css/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="css/venobox/venobox.css" rel="stylesheet">
@@ -23,26 +25,28 @@
     <link href="css/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 </head>
 
-<body style="background-color: white;">
+<body style="background-color: white;" onload="myFunction()" style="margin:0;">
+  <div id="loader"></div>
+  <div style="display: none;" id="myDiv" class="animate-bottom">
   <nav class="navbar navbar-expand-lg navbar-light">
     <img src="images/medical-logo.png" width="20px" height="20px">
-    <a class="navbar-brand" href="#">ARYS<b>Hospitals</b></a>  		
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+    <a class="navbar-brand" href="#">RAYS<b>Hospitals</b></a>  		
+    <button type="button" class="navbar-toggler " data-toggle="collapse" data-target="#navbarCollapse">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Collection of nav links, forms, and other content for toggling -->
     <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
       <div class="navbar-nav">
         <a href="#" class="nav-item nav-link">Home</a>
+        <a href="#Features" class="nav-item nav-link">Features</a>
         <a href="#About" class="nav-item nav-link">About Us</a>			
         <a href="#contact" class="nav-item nav-link">Contact Us</a>
           </div>
 
       <div class="navbar-nav ml-auto">
+        <button data-target="#loginModal" class="btn btn-light" type="button" data-toggle="modal">Login</button>
         <a href="#" class="nav-item nav-link"><i class="fa fa-facebook"></i></a>
         <a href="#" class="nav-item nav-link"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="nav-item nav-link"><i class="fa fa-google-plus"></i></a>
-        <a href="#" class="nav-item nav-link"><i class="fa fa-pinterest-p"></i></a>
           </div>		
     </div>
   </nav>
@@ -106,8 +110,103 @@
       <br>
       <br>
      <!--Carosel end-->
+     <!--Features-->
+     
+     <section id="Features">
+      <div class="container-sm">
+        <h1 class="text-center text-capitalize pt-5">Features</h1>
+        <hr class="w-25 mx-auto pb-5">
+        <div class="row">
+          <div class="col-sm mb-5">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <br>
+              <h4><b>Login Portal</b></h4>
+              <img src="images/login.png" alt="Avatar" style="width:180px;height:180px;">
+            </div>
+            <div class="flip-card-back">
+              <br><br>
+              <p>Login into the Patients, Doctors & Staff Accounts</p>
+              <p><BUTTON class="btn bg-success text-light" data-target="#loginModal" type="button" data-toggle="modal">Click Here</BUTTON></p>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+          <div class="col-sm mb-5">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <br>
+              <h4><b>Ambulance Tracker</b></h4>
+              <img src="images/amb icon.png" alt="Avatar" style="width:180px;height:180px;">
+            </div>
+            <div class="flip-card-back">
+              <br><br>
+              <p>Live tracking of all the ambulances in your city.</p>
+              <p><BUTTON class="btn bg-success text-light" >Click Here</BUTTON></p>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+        <div class="col-sm mb-5">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <br>
+              <h4><b>Online Pharmacy</b></h4>
+              <img src="images/Pharmacy icon.png" alt="Avatar" style="width:180px;height:180px;">
+            </div>
+            <div class="flip-card-back">
+              <br><br>
+              <p>Buy any medicine or drug from our trusted suppliers online .</p>
+              <p><BUTTON class="btn bg-success text-light" >Click Here</BUTTON></p>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      
+    </div>
+    <br><br><br>
+    </section>
+
+
+    <!--Modals-->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Choose The Login Type</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+               <img src="images/staff.png" alt="" style="width:100px;height:100px;">
+               <br>   
+              <button type="button" class="btn btn-danger">Staff</button>
+              </div>
+              <div class="col">
+                <img src="images/Patients.png" alt="" style="width:100px;height:100px;">
+                <br> 
+              <button type="button" class="btn btn-success">Patients</button>
+             </div>
+             </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
 
      <!--About Section -->
+     
      <section id="About">
       <div class="container">
         <h1 class="text-center text-capitalize pt-5">About us</h1>
@@ -123,17 +222,15 @@
            <b>SAP ID:</b> 1000010801<br>
            <b>Roll No:</b> 180178011
           </p>
-            
-           
+            <a href="mailto: adiusingh127@gmail.com">
+            <i class="icofont-envelope "></i>
+            Email .
+            </a>
+  
             <a href="tel: 08941847380">
               <i class="icofont-phone"></i>
-              +91-8941847380
+              Call
               </a>
-              <br>
-              <a href="mailto: adiusingh127@gmail.com" class="d-lg-none d-xl-block">
-                <i class="icofont-envelope"></i>
-                <span style="font-size: small">adiusingh127@gmail.com</span>
-                </a>
           </div>
           
           <!--Rishav-->
@@ -146,17 +243,15 @@
            <b>SAP ID:</b> 1000010909<br>
            <b>Roll No:</b> 180178012 
           </p>
-            
-            
+            <a href="mailto: bhardwajrishav89@gmail.com">
+            <i class="icofont-envelope"></i>
+            Email .
+            </a>
+
             <a href="tel: 06205109117">
               <i class="icofont-phone"></i>
-              +91-6205109117
+              Call
               </a>
-              <br>
-              <a href="mailto: bhardwajrishav89@gmail.com" class="d-lg-none d-xl-block">
-                <i class="icofont-envelope"></i>
-                <span style="font-size: small">bhardwajrishav89@gmail.com</span>
-                </a>
           </div>
 
            <!--Saurabh-->
@@ -164,23 +259,20 @@
             <img src="images/Saurabh.jpeg" class="img-fluid rounded-circle" alt="Saurabh">
            </div>
           <div class="col-lg-4 col-md-4 col-7 mb-5">
-            
           <p>
             <h4>Saurabh Bhandari</h4>
            <b>SAP ID:</b> 1000010636<br>
            <b>Roll No:</b> 180178004
           </p>
-          <a href="tel: 08192992759">
-            <i class="icofont-phone"></i>
-            +91-8192992759
-            </a>
-            <br>
-          <a href="mailto: saurabh20bhandari@gmail.com" class="d-lg-none d-xl-block">
+            <a href="mailto: saurabh20bhandari@gmail.com">
             <i class="icofont-envelope"></i>
-            <span style="font-size: small">saurabh20bhandari@gmail.com</span>
+            Email .
             </a>
-            
-            
+   
+            <a href="tel: 08192992759">
+              <i class="icofont-phone"></i>
+              Call
+              </a>
           </div>
           
 
@@ -195,17 +287,14 @@
            <b>SAP ID:</b> 1000010515<br>
            <b>Roll No:</b> 180178045
           </p>
-          <a href="tel: 08630087043">
-            <i class="icofont-phone"></i>
-            +91-8630087043
-            </a>
-            <br>
-            <a href="mailto: yashkushwaha227@gmail.com" class="d-lg-none d-xl-block">
+            <a href="mailto: yashkushwaha@gmail.com">
             <i class="icofont-envelope"></i>
-            <span style="font-size: small">yashkushwaha227@gmail.com</span>
+            Email .
             </a>
-          
-            
+            <a href="tel: 08630087043">
+              <i class="icofont-phone"></i>
+              Call
+              </a>
           </div>
         </div>
       </div>
@@ -300,7 +389,7 @@
 
     <div class="mr-md-auto text-center text-md-left">
       <div class="copyright">
-        &copy; Copyright <strong><span>ARYSHopitals</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>RAYSHopitals</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         Designed by Group 56
@@ -315,12 +404,13 @@
     </div>
   </div>
 </footer><!-- End Footer -->
-
+</div>
 
     <!--Scripts-->
     
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
